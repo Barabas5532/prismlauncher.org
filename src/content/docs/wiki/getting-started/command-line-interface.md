@@ -5,19 +5,34 @@ sidebar:
 ---
 
 ```text
-Usage: prismlauncher [-h] [-v] [-d dir] [-l launch] [-s server] [-a profile] [-I import] [--show show] [--alive] [--help-all]
+Usage: prismlauncher [options] [URL...]
+Prism Launcher
 
 Options:
-  -d, --dir directory    Use a custom path as application root (use '.' for current directory)
-  -l, --launch instance  Launch the specified instance (by instance ID)
-  -s, --server address   Join the specified server on launch (only valid in combination with --launch)
-  -a, --profile profile  Use the account specified by its profile name (only valid in combination with --launch)
-  --alive                Write a small 'live.check' file after the launcher starts
-  -I, --import file      Import instance from specified zip (local path or URL)
-  --show show            Opens the window for the specified instance (by instance ID)
-  -h, --help             Displays help on commandline options.
-  --help-all             Displays help, including generic Qt options.
-  -v, --version          Displays version information.
+  -d, --dir <directory>    Use a custom path as application root (use '.' for
+                           current directory)
+  -l, --launch <instance>  Launch the specified instance (by instance ID)
+  -s, --server <address>   Join the specified server on launch (only valid in
+                           combination with --launch)
+  -w, --world <world>      Join the specified world on launch (only valid in
+                           combination with --launch)
+  -a, --profile <profile>  Use the account specified by its profile name (only
+                           valid in combination with --launch)
+  -o, --offline <offline>  Launch offline, with given player name (only valid
+                           in combination with --launch)
+  --alive                  Write a small 'live.check' file after the launcher
+                           starts
+  -I, --import <url>       Import instance or resource from specified local
+                           path or URL
+  --show <show>            Opens the window for the specified instance (by
+                           instance ID)
+  -?, -h, --help           Displays help on commandline options.
+  --help-all               Displays help, including generic Qt options.
+  -v, --version            Displays version information.
+
+Arguments:
+  URL                      Import the resource(s) at the given URL(s) (same as
+                           -I / --import)
 ```
 
 ## What is an instance ID, and where do I find it?
